@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="39ce7637-2461-4208-9e08-fd0eff746045" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.17.40:8733/Design_Time_Addresses/CustomerServiceWcf/CustomerServiceWcfService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="da613d00-f28a-45b8-88b5-05ecedbeccd9" SourceId="1" SourceUrl="http://192.168.17.40:8733/Design_Time_Addresses/CustomerServiceWcf/CustomerServiceWcfService/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="d9aaf38f-9f4b-4db1-beef-d396e3248240" SourceId="1" SourceUrl="http://192.168.17.40:8733/Design_Time_Addresses/CustomerServiceWcf/CustomerServiceWcfService/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="7c5e7c0a-e42b-4cbf-8c3d-255ab1ed8323" SourceId="1" SourceUrl="http://192.168.17.40:8733/Design_Time_Addresses/CustomerServiceWcf/CustomerServiceWcfService/mex" />
+    <MetadataFile FileName="CustomerServiceWcf1.xsd" MetadataType="Schema" ID="8187256f-2819-41f7-b0b1-4c14e24cd358" SourceId="1" SourceUrl="http://192.168.17.40:8733/Design_Time_Addresses/CustomerServiceWcf/CustomerServiceWcfService/mex" />
+    <MetadataFile FileName="ServiceCommon.Enum1.xsd" MetadataType="Schema" ID="256a936c-9a7a-4baf-a35d-74d7809e8339" SourceId="1" SourceUrl="http://192.168.17.40:8733/Design_Time_Addresses/CustomerServiceWcf/CustomerServiceWcfService/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="67a299c1-5842-40cb-bae2-23f388f59f32" SourceId="1" SourceUrl="http://192.168.17.40:8733/Design_Time_Addresses/CustomerServiceWcf/CustomerServiceWcfService/mex" />
+    <MetadataFile FileName="CustomerServiceCommon.Models.Model1.xsd" MetadataType="Schema" ID="467571b0-6585-483e-a01d-ca8f8eb2bf56" SourceId="1" SourceUrl="http://192.168.17.40:8733/Design_Time_Addresses/CustomerServiceWcf/CustomerServiceWcfService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

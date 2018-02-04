@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceWcfService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ServiceWcf" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ServiceCommon.Enum" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceWcfService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_fnH2000ToCDSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:fnH2000ToCDSystem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_fnH2000ToCDSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fnH2000ToCDSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_ImportRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportRequest" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_ImportRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_exportDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:exportDF" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_exportDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exportDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_getuploadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:getuploadFile" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_getuploadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getuploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_SaveUclLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUclLog" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_SaveUclLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUclLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_exportEntryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:exportEntryList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_exportEntryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exportEntryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_importManual_InputMessage">
+    <wsdl:part name="parameters" element="tns:importManual" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_importManual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:importManualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_H2000ImportDeclare_InputMessage">
+    <wsdl:part name="parameters" element="tns:H2000ImportDeclare" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_H2000ImportDeclare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:H2000ImportDeclareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_importManualSingle_InputMessage">
+    <wsdl:part name="parameters" element="tns:importManualSingle" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_importManualSingle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:importManualSingleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_getStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStatus" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_getStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_updateEntryId_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateEntryId" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_updateEntryId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateEntryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_updateHeadDtl_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateHeadDtl" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_updateHeadDtl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateHeadDtlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_testUi_InputMessage">
+    <wsdl:part name="parameters" element="tns:testUi" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWcfService_testUi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testUiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceWcfService">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/GetData" message="tns:IServiceWcfService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/GetDataResponse" message="tns:IServiceWcfService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/GetDataUsingDataContract" message="tns:IServiceWcfService_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/GetDataUsingDataContractResponse" message="tns:IServiceWcfService_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fnH2000ToCDSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/fnH2000ToCDSystem" message="tns:IServiceWcfService_fnH2000ToCDSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/fnH2000ToCDSystemResponse" message="tns:IServiceWcfService_fnH2000ToCDSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/ImportRequest" message="tns:IServiceWcfService_ImportRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/ImportRequestResponse" message="tns:IServiceWcfService_ImportRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exportDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/exportDF" message="tns:IServiceWcfService_exportDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/exportDFResponse" message="tns:IServiceWcfService_exportDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getuploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/getuploadFile" message="tns:IServiceWcfService_getuploadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/getuploadFileResponse" message="tns:IServiceWcfService_getuploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUclLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/SaveUclLog" message="tns:IServiceWcfService_SaveUclLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/SaveUclLogResponse" message="tns:IServiceWcfService_SaveUclLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exportEntryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/exportEntryList" message="tns:IServiceWcfService_exportEntryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/exportEntryListResponse" message="tns:IServiceWcfService_exportEntryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="importManual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/importManual" message="tns:IServiceWcfService_importManual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/importManualResponse" message="tns:IServiceWcfService_importManual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="H2000ImportDeclare">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/H2000ImportDeclare" message="tns:IServiceWcfService_H2000ImportDeclare_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/H2000ImportDeclareResponse" message="tns:IServiceWcfService_H2000ImportDeclare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="importManualSingle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/importManualSingle" message="tns:IServiceWcfService_importManualSingle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/importManualSingleResponse" message="tns:IServiceWcfService_importManualSingle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/getStatus" message="tns:IServiceWcfService_getStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/getStatusResponse" message="tns:IServiceWcfService_getStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateEntryId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/updateEntryId" message="tns:IServiceWcfService_updateEntryId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/updateEntryIdResponse" message="tns:IServiceWcfService_updateEntryId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateHeadDtl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/updateHeadDtl" message="tns:IServiceWcfService_updateHeadDtl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/updateHeadDtlResponse" message="tns:IServiceWcfService_updateHeadDtl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="testUi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWcfService/testUi" message="tns:IServiceWcfService_testUi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWcfService/testUiResponse" message="tns:IServiceWcfService_testUi_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceWcfService" type="tns:IServiceWcfService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnH2000ToCDSystem">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/fnH2000ToCDSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportRequest">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/ImportRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportDF">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/exportDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getuploadFile">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/getuploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUclLog">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/SaveUclLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportEntryList">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/exportEntryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importManual">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/importManual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="H2000ImportDeclare">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/H2000ImportDeclare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importManualSingle">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/importManualSingle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatus">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/getStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEntryId">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/updateEntryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateHeadDtl">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/updateHeadDtl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testUi">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/testUi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IServiceWcfService1" type="tns:IServiceWcfService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnH2000ToCDSystem">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/fnH2000ToCDSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportRequest">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/ImportRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportDF">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/exportDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getuploadFile">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/getuploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUclLog">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/SaveUclLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportEntryList">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/exportEntryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importManual">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/importManual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="H2000ImportDeclare">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/H2000ImportDeclare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importManualSingle">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/importManualSingle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatus">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/getStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEntryId">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/updateEntryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateHeadDtl">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/updateHeadDtl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testUi">
+      <soap:operation soapAction="http://tempuri.org/IServiceWcfService/testUi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceWcfService">
+    <wsdl:port name="BasicHttpBinding_IServiceWcfService" binding="tns:BasicHttpBinding_IServiceWcfService">
+      <soap:address location="http://localhost:8734/Design_Time_Addresses/ServiceWcf/ServiceWcfService/" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IServiceWcfService1" binding="tns:BasicHttpBinding_IServiceWcfService1">
+      <soap:address location="http://localhost:8734/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

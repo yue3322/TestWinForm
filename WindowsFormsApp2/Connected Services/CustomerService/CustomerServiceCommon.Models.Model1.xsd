@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CustomerServiceCommon.Models.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CustomerServiceCommon.Models.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ElectronicPacking">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="csotco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="csotcoDt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ctntype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="detail" nillable="true" type="tns:ArrayOfCtnResult" />
+      <xs:element minOccurs="0" name="in_addr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="in_date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total_package" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total_weight" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="voyage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vslname" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ElectronicPacking" nillable="true" type="tns:ElectronicPacking" />
+  <xs:complexType name="ArrayOfCtnResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CtnResult" nillable="true" type="tns:CtnResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCtnResult" nillable="true" type="tns:ArrayOfCtnResult" />
+  <xs:complexType name="CtnResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="blno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="csotrp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ctn_opr_code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ctnno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cus_status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cus_time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="package" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="unloadport" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="voyage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vslname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="weight" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CtnResult" nillable="true" type="tns:CtnResult" />
+</xs:schema>

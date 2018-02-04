@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DoWork">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoWorkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomsDeclarationQuery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TradeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DateFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Dateto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EntryNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GoodsName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="page_index" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="page_size" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomsDeclarationQueryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomsDeclarationQueryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDeh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EntryNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tradeCo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDehResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getDehResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

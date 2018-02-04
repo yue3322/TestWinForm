@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CustomerServiceWcfService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CustomerServiceWcf" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ServiceCommon.Enum" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CustomerServiceCommon.Models.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICustomerServiceWcfService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_exportEntryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:exportEntryList" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_exportEntryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exportEntryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_synchronizationData_InputMessage">
+    <wsdl:part name="parameters" element="tns:synchronizationData" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_synchronizationData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:synchronizationDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_importCDSystemData_InputMessage">
+    <wsdl:part name="parameters" element="tns:importCDSystemData" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_importCDSystemData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:importCDSystemDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getCDSystemData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCDSystemData" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getCDSystemData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCDSystemDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getExportEdiNOs_InputMessage">
+    <wsdl:part name="parameters" element="tns:getExportEdiNOs" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getExportEdiNOs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getExportEdiNOsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_changeExportState_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeExportState" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_changeExportState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeExportStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_changeImportState_InputMessage">
+    <wsdl:part name="parameters" element="tns:changeImportState" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_changeImportState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changeImportStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_importCDSystemDataStr_InputMessage">
+    <wsdl:part name="parameters" element="tns:importCDSystemDataStr" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_importCDSystemDataStr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:importCDSystemDataStrResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_checkCustomerSeviceEdiNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkCustomerSeviceEdiNo" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_checkCustomerSeviceEdiNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkCustomerSeviceEdiNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_exportDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:exportDF" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_exportDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exportDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getuploadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:getuploadFile" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getuploadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getuploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_SaveUclLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUclLog" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_SaveUclLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUclLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_ErrorLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:ErrorLog" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_ErrorLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ErrorLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getEdiNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEdiNo" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getEdiNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEdiNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_exportManual_InputMessage">
+    <wsdl:part name="parameters" element="tns:exportManual" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_exportManual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exportManualResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_H2000ImportDeclare_InputMessage">
+    <wsdl:part name="parameters" element="tns:H2000ImportDeclare" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_H2000ImportDeclare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:H2000ImportDeclareResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_exportManualSingle_InputMessage">
+    <wsdl:part name="parameters" element="tns:exportManualSingle" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_exportManualSingle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exportManualSingleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_updateEntryId_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateEntryId" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_updateEntryId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateEntryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getData" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_getData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_GetCstVslInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCstVslInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerServiceWcfService_GetCstVslInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCstVslInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICustomerServiceWcfService">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/GetData" message="tns:ICustomerServiceWcfService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/GetDataResponse" message="tns:ICustomerServiceWcfService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/GetDataUsingDataContract" message="tns:ICustomerServiceWcfService_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/GetDataUsingDataContractResponse" message="tns:ICustomerServiceWcfService_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exportEntryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/exportEntryList" message="tns:ICustomerServiceWcfService_exportEntryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/exportEntryListResponse" message="tns:ICustomerServiceWcfService_exportEntryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="synchronizationData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/synchronizationData" message="tns:ICustomerServiceWcfService_synchronizationData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/synchronizationDataResponse" message="tns:ICustomerServiceWcfService_synchronizationData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="importCDSystemData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/importCDSystemData" message="tns:ICustomerServiceWcfService_importCDSystemData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/importCDSystemDataResponse" message="tns:ICustomerServiceWcfService_importCDSystemData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCDSystemData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getCDSystemData" message="tns:ICustomerServiceWcfService_getCDSystemData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getCDSystemDataResponse" message="tns:ICustomerServiceWcfService_getCDSystemData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getExportEdiNOs">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getExportEdiNOs" message="tns:ICustomerServiceWcfService_getExportEdiNOs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getExportEdiNOsResponse" message="tns:ICustomerServiceWcfService_getExportEdiNOs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeExportState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/changeExportState" message="tns:ICustomerServiceWcfService_changeExportState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/changeExportStateResponse" message="tns:ICustomerServiceWcfService_changeExportState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changeImportState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/changeImportState" message="tns:ICustomerServiceWcfService_changeImportState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/changeImportStateResponse" message="tns:ICustomerServiceWcfService_changeImportState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="importCDSystemDataStr">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/importCDSystemDataStr" message="tns:ICustomerServiceWcfService_importCDSystemDataStr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/importCDSystemDataStrResponse" message="tns:ICustomerServiceWcfService_importCDSystemDataStr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkCustomerSeviceEdiNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/checkCustomerSeviceEdiNo" message="tns:ICustomerServiceWcfService_checkCustomerSeviceEdiNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/checkCustomerSeviceEdiNoResponse" message="tns:ICustomerServiceWcfService_checkCustomerSeviceEdiNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exportDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/exportDF" message="tns:ICustomerServiceWcfService_exportDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/exportDFResponse" message="tns:ICustomerServiceWcfService_exportDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getuploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getuploadFile" message="tns:ICustomerServiceWcfService_getuploadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getuploadFileResponse" message="tns:ICustomerServiceWcfService_getuploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUclLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/SaveUclLog" message="tns:ICustomerServiceWcfService_SaveUclLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/SaveUclLogResponse" message="tns:ICustomerServiceWcfService_SaveUclLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ErrorLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/ErrorLog" message="tns:ICustomerServiceWcfService_ErrorLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/ErrorLogResponse" message="tns:ICustomerServiceWcfService_ErrorLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEdiNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getEdiNo" message="tns:ICustomerServiceWcfService_getEdiNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getEdiNoResponse" message="tns:ICustomerServiceWcfService_getEdiNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exportManual">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/exportManual" message="tns:ICustomerServiceWcfService_exportManual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/exportManualResponse" message="tns:ICustomerServiceWcfService_exportManual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="H2000ImportDeclare">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/H2000ImportDeclare" message="tns:ICustomerServiceWcfService_H2000ImportDeclare_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/H2000ImportDeclareResponse" message="tns:ICustomerServiceWcfService_H2000ImportDeclare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exportManualSingle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/exportManualSingle" message="tns:ICustomerServiceWcfService_exportManualSingle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/exportManualSingleResponse" message="tns:ICustomerServiceWcfService_exportManualSingle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getStatus" message="tns:ICustomerServiceWcfService_getStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getStatusResponse" message="tns:ICustomerServiceWcfService_getStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateEntryId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/updateEntryId" message="tns:ICustomerServiceWcfService_updateEntryId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/updateEntryIdResponse" message="tns:ICustomerServiceWcfService_updateEntryId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getData" message="tns:ICustomerServiceWcfService_getData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/getDataResponse" message="tns:ICustomerServiceWcfService_getData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCstVslInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/GetCstVslInfo" message="tns:ICustomerServiceWcfService_GetCstVslInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerServiceWcfService/GetCstVslInfoResponse" message="tns:ICustomerServiceWcfService_GetCstVslInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICustomerServiceWcfService" type="tns:ICustomerServiceWcfService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportEntryList">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/exportEntryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="synchronizationData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/synchronizationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importCDSystemData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/importCDSystemData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCDSystemData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getCDSystemData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExportEdiNOs">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getExportEdiNOs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeExportState">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/changeExportState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeImportState">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/changeImportState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importCDSystemDataStr">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/importCDSystemDataStr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCustomerSeviceEdiNo">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/checkCustomerSeviceEdiNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportDF">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/exportDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getuploadFile">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getuploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUclLog">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/SaveUclLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ErrorLog">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/ErrorLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEdiNo">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getEdiNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportManual">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/exportManual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="H2000ImportDeclare">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/H2000ImportDeclare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportManualSingle">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/exportManualSingle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatus">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEntryId">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/updateEntryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCstVslInfo">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/GetCstVslInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_ICustomerServiceWcfService1" type="tns:ICustomerServiceWcfService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportEntryList">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/exportEntryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="synchronizationData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/synchronizationData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importCDSystemData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/importCDSystemData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCDSystemData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getCDSystemData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExportEdiNOs">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getExportEdiNOs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeExportState">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/changeExportState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changeImportState">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/changeImportState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importCDSystemDataStr">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/importCDSystemDataStr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCustomerSeviceEdiNo">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/checkCustomerSeviceEdiNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportDF">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/exportDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getuploadFile">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getuploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUclLog">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/SaveUclLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ErrorLog">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/ErrorLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEdiNo">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getEdiNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportManual">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/exportManual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="H2000ImportDeclare">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/H2000ImportDeclare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportManualSingle">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/exportManualSingle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatus">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEntryId">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/updateEntryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getData">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/getData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCstVslInfo">
+      <soap:operation soapAction="http://tempuri.org/ICustomerServiceWcfService/GetCstVslInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerServiceWcfService">
+    <wsdl:port name="BasicHttpBinding_ICustomerServiceWcfService" binding="tns:BasicHttpBinding_ICustomerServiceWcfService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/CustomerServiceWcf/CustomerServiceWcfService/" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_ICustomerServiceWcfService1" binding="tns:BasicHttpBinding_ICustomerServiceWcfService1">
+      <soap:address location="http://localhost:8733/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
